@@ -7,4 +7,6 @@ with pkgs;
   stremio-wrapper = callPackage ./stremio/stremio-wrapper.nix {};
 
   mbsync_tools = import ./mbsync_tools.nix;
+
+  borgmatic = callPackage ./borgmatic/default.nix {};
 }
