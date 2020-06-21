@@ -8,7 +8,7 @@ with pkgs;
 
   mbsync_tools = import ./mbsync_tools.nix;
 
-  sgtk-menu = import ./sgtk-menu.nix {};
+  sgtk-menu = import ./sgtk-menu.nix;
 
   borgmatic = callPackage ./borgmatic/default.nix {};
 }
