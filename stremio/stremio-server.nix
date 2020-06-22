@@ -32,9 +32,6 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     description = "The next generation media center";
     homepage = "https://stremio.com";
-    maintainers = [
-      
-    ];
     platforms = platforms.linux;
   };
 }
