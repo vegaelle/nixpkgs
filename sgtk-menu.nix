@@ -6,8 +6,8 @@ buildPythonApplication rec {
   src = fetchFromGitHub {
     owner = "nwg-piotr";
     repo = "sgtk-menu";
-    rev = "v1.3.1";
-    sha256 = "sha256:1zaznda9xz2n5rrxh71yf8b2557xq3n65miaqpakkcns0b4p3xkq";
+    rev = "v1.4.1";
+    sha256 = "sha256:1b5bp0ln493c8y63hx0dywjbv4k7z2qgdiy89c99mxdpznb0g3bd";
   };
 
   strictDeps = false;
