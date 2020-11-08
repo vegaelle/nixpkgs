@@ -7,7 +7,7 @@ in
 with pkgs;
 stdenv.mkDerivation rec {
   name = "stremio-wrapper";
-  version = "4.4.106";
+  version = "4.4.120";
 
   src = pkgs.writeShellScriptBin "stremio" ''
     ${pkgs.nodejs}/bin/node ${stremio-server}/server.js &
@@ -18,7 +18,7 @@ stdenv.mkDerivation rec {
 
   stremioItem = makeDesktopItem {
     name = "Stremio";
-    exec = "stremio";
+    exec = "${src}/bin/stremio";
     comment = "${meta.description}";
     desktopName = "Stremio";
     categories = "AudioVideo;Video;Player;TV;";

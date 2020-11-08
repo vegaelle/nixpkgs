@@ -3,21 +3,23 @@
 with pkgs;
 mkDerivation rec {
   name = "stremio-shell";
-  version = "4.4.106";
+  version = "v4.4.120";
 
   src = fetchFromGitHub {
     owner = "Stremio";
     repo = "stremio-shell";
     rev = "${version}";
     fetchSubmodules = true;
-    sha256 = "05lp1iq08n8wh7m12d9pz9lg6hwc0d936kmlzvdxwxbnm86cxy54";
+    sha256 = "0m68ck14kzg4gqmy2l3208pl5ibpggcrrj6r38gwrdwfn00scn11";
   };
 
   nativeBuildInputs = [ wrapQtAppsHook ];
 
   buildInputs = [
     qtbase
-    qt5.full
+    # qt5.full
+    qt5.qtquickcontrols2
+    qt5.qtwebengine
     qtcreator
     mpv
     libGL
