@@ -3,14 +3,14 @@
 with pkgs;
 mkDerivation rec {
   name = "stremio-shell";
-  version = "v4.4.120";
+  version = "4.4.135";
 
   src = fetchFromGitHub {
     owner = "Stremio";
     repo = "stremio-shell";
-    rev = "${version}";
+    rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "0m68ck14kzg4gqmy2l3208pl5ibpggcrrj6r38gwrdwfn00scn11";
+    sha256 = "0kq96pafsph7cmxwypyb0cv9bai8lc6h6pbhippkk53k3pvxfba7";
   };
 
   nativeBuildInputs = [ wrapQtAppsHook ];
@@ -39,9 +39,6 @@ mkDerivation rec {
   meta = with lib; {
     description = "The next generation media center";
     homepage = "https://stremio.com";
-    maintainers = [
-      
-    ];
     platforms = platforms.linux;
   };
 }

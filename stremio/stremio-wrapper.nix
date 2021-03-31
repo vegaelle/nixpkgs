@@ -7,7 +7,7 @@ in
 with pkgs;
 stdenv.mkDerivation rec {
   name = "stremio-wrapper";
-  version = "4.4.120";
+  version = "4.4.135";
 
   src = pkgs.writeShellScriptBin "stremio" ''
     ${pkgs.nodejs}/bin/node ${stremio-server}/server.js &
@@ -33,9 +33,6 @@ stdenv.mkDerivation rec {
   meta = with lib; {
     description = "The next generation media center";
     homepage = "https://stremio.com";
-    maintainers = [
-      
-    ];
     platforms = platforms.linux;
   };
 }
