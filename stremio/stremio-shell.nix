@@ -10,7 +10,7 @@ mkDerivation rec {
     repo = "stremio-shell";
     rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "0000000000000000000000000000000000000000000000000000";
+    sha256 = "0dzc4by9mxhijgccilha0wlgvjxwss4b015jfg39h9cdnwf5pphh";
   };
 
   nativeBuildInputs = [ wrapQtAppsHook ];
