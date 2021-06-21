@@ -3,14 +3,14 @@
 with pkgs;
 mkDerivation rec {
   name = "stremio-shell";
-  version = "4.4.135";
+  version = "4.4.137";
 
   src = fetchFromGitHub {
     owner = "Stremio";
     repo = "stremio-shell";
     rev = "v${version}";
     fetchSubmodules = true;
-    sha256 = "0kq96pafsph7cmxwypyb0cv9bai8lc6h6pbhippkk53k3pvxfba7";
+    sha256 = "0000000000000000000000000000000000000000000000000000";
   };
 
   nativeBuildInputs = [ wrapQtAppsHook ];

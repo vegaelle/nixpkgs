@@ -3,7 +3,7 @@
 with pkgs;
 stdenv.mkDerivation rec {
   name = "stremio-server";
-  version = "4.4.135";
+  version = "4.4.137";
 
   src = fetchurl {
     url = "https://dl.strem.io/four/v${version}/server.js";
@@ -12,7 +12,7 @@ stdenv.mkDerivation rec {
   };
 
   asarFile = fetchurl {
-    url = "https://dl.strem.io/four/v4.4.111/stremio.asar";
+    url = "https://dl.strem.io/four/v${version}/stremio.asar";
     # sha256 = "1jkr377dlr5m5zm7n3lsvz3lmnqhipzb9r1szkrinfab865ck50g";
     sha256 = "1jkr377dlr5m5zm7n3lsvz3lmnqhipzb9r1szkrinfab865ck50g";
   };
