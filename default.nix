@@ -11,6 +11,6 @@ with pkgs;
   sgtk-menu = import ./sgtk-menu.nix;
 
   borgmatic = callPackage ./borgmatic/default.nix {};
-  
-  lightly = callPackage ./lightly.nix {};
+
+  rofi-wayland = callPackage ./rofi-wayland.nix {};
 }
