@@ -7,7 +7,7 @@ in
 with pkgs;
 stdenv.mkDerivation rec {
   name = "stremio-wrapper";
-  version = "4.4.137";
+  version = "4.4.142";
 
   src = pkgs.writeShellScriptBin "stremio" ''
     ${pkgs.nodejs}/bin/node ${stremio-server}/server.js &
