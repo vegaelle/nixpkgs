@@ -31,9 +31,10 @@ mkDerivation rec {
   buildPhase = "make";
 
   installPhase = ''
-    mkdir -p $out/bin
+    mkdir -p $out/bin $out/images
     make install
     ln -s $out/opt/stremio/stremio $out/bin/stremio-shell
+    ln -s $src/images/stremio.svg $out/images
     '';
 
   meta = with lib; {

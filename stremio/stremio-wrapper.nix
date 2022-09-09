@@ -16,18 +16,22 @@ stdenv.mkDerivation rec {
     kill $serverPid
     '';
 
-  stremioItem = makeDesktopItem {
+  desktopItem = makeDesktopItem {
     name = "Stremio";
     exec = "${src}/bin/stremio";
     comment = "${meta.description}";
     desktopName = "Stremio";
-    categories = "AudioVideo;Video;Player;TV;";
+    categories = ["AudioVideo" "Video" "Player" "TV"];
     icon = "${stremio-shell}/images/stremio.svg";
   };
 
   installPhase = ''
-    mkdir -p $out/bin
+    mkdir -p $out/bin $out/share
     cp $src/bin/stremio $out/bin/stremio
+    ln -s ${desktopItem}/share/applications $out/share/
+    '';
+
+  postInstall = ''
     '';
 
   meta = with lib; {
