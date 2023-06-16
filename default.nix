@@ -13,4 +13,6 @@ with pkgs;
   borgmatic = callPackage ./borgmatic/default.nix {};
 
   rofi-wayland = callPackage ./rofi-wayland.nix {};
+  
+  seamly2d = libsForQt5.callPackage ./seamly.nix {};
 }
